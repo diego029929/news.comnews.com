@@ -1,0 +1,62 @@
+:root {
+  --bg: #f7f7fb;
+  --card: #fff;
+  --muted: #6b7280;
+  --accent: #0ea5a4;
+  --shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  --maxw: 1100px;
+  --radius: 12px;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: #0f172a; }
+
+.container { max-width: var(--maxw); margin: 32px auto; padding: 0 20px; }
+
+/* HEADER */
+header { display: flex; justify-content: space-between; align-items: center; }
+.brand { display: flex; gap: 12px; align-items: center; }
+.logo {
+  width: 46px; height: 46px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #06b6d4, #7c3aed);
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: 700; box-shadow: var(--shadow);
+}
+.title { font-weight: 800; }
+.subtitle { font-size: 13px; color: var(--muted); }
+nav { display: flex; gap: 16px; }
+nav a { text-decoration: none; color: var(--muted); font-weight: 600; }
+nav a.active { color: var(--accent); }
+
+/* GRID */
+.grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-top: 20px; }
+.card { background: var(--card); padding: 18px; border-radius: var(--radius); box-shadow: var(--shadow); }
+
+/* HERO */
+.hero { display: flex; gap: 18px; }
+.hero-text { flex: 1; }
+.kicker { background: #eef2ff; color: #6b21a8; padding: 6px 10px; border-radius: 999px; font-size: 13px; font-weight: bold; }
+.hero img { width: 320px; max-width: 40%; border-radius: 10px; object-fit: cover; }
+.meta { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.btn-primary {
+  margin-top: 12px; padding: 10px 14px; border: 0;
+  background: var(--accent); color: white; font-weight: 700;
+  border-radius: 10px; cursor: pointer;
+}
+
+/* FULL ARTICLE */
+.article-full { display: none; margin-top: 18px; }
+.article-full.active { display: block; }
+.article-body { line-height: 1.6; margin-top: 12px; }
+
+/* FOOTER */
+footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: 13px; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .hero { flex-direction: column; }
+  .hero img { max-width: 100%; }
+}
