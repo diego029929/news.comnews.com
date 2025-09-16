@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Beacon — Class Project</title>
+  <meta name="description" content="Fictional news site built for a school project.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">TB</div>
+        <div>
+          <div class="title">The Beacon</div>
+          <div class="subtitle">Fictional News — Class Project</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#" class="active">Home</a>
+        <a href="#">World</a>
+        <a href="#">Science</a>
+        <a href="#">Culture</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section>
+        <!-- HERO ARTICLE -->
+        <article class="card hero">
+          <div class="hero-text">
+            <span class="kicker">Breaking</span>
+            <h1 id="headline">[Headline goes here]</h1>
+            <div class="meta">By [Author] • [Date] • [Category]</div>
+            <p id="intro">
+              [A short intro paragraph goes here — like the lead of a real news article. This is where you hook the reader.]
+            </p>
+            <button onclick="openArticle()" class="btn-primary">Read article</button>
+          </div>
+          <img src="placeholder.png" alt="Hero illustration">
+        </article>
+
+        <!-- FULL ARTICLE (hidden until clicked) -->
+        <article id="full-article" class="card article-full">
+          <h2 id="full-headline">[Headline goes here]</h2>
+          <div class="meta">By [Author] • [Date] • [Category]</div>
+          <div class="article-body">
+            <p><strong>Disclaimer:</strong> This article is fictional and was created for a class project.</p>
+            <p>[Your full article text goes here...]</p>
+          </div>
+        </article>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h4>About this site</h4>
+          <p>This is a fictional site created for a school assignment. None of the stories are real.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>All content on this site is fictional and created solely for educational purposes.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
