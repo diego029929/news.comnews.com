@@ -3,67 +3,69 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Beacon — Class Project</title>
-  <meta name="description" content="Fictional news site built for a school project.">
+  <title>NewsToday</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">TB</div>
-        <div>
-          <div class="title">The Beacon</div>
-          <div class="subtitle">Fictional News — Class Project</div>
-        </div>
-      </div>
-      <nav>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">NewsToday</div>
+      <nav class="nav">
         <a href="#" class="active">Home</a>
         <a href="#">World</a>
+        <a href="#">Politics</a>
         <a href="#">Science</a>
         <a href="#">Culture</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main class="grid">
-      <section>
-        <!-- HERO ARTICLE -->
-        <article class="card hero">
-          <div class="hero-text">
-            <span class="kicker">Breaking</span>
-            <h1 id="headline">[Headline goes here]</h1>
-            <div class="meta">By [Author] • [Date] • [Category]</div>
-            <p id="intro">
-              [A short intro paragraph goes here — like the lead of a real news article. This is where you hook the reader.]
-            </p>
-            <button onclick="openArticle()" class="btn-primary">Read article</button>
-          </div>
-          <img src="placeholder.png" alt="Hero illustration">
-        </article>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="hero.jpg" alt="Main story">
+    <div class="hero-overlay"></div>
+    <div class="hero-text container">
+      <h1>[Main Headline Here]</h1>
+      <p>[Subtitle or short description of the article...]</p>
+      <button onclick="openArticle()" class="btn-primary">Read more</button>
+    </div>
+  </section>
 
-        <!-- FULL ARTICLE (hidden until clicked) -->
-        <article id="full-article" class="card article-full">
-          <h2 id="full-headline">[Headline goes here]</h2>
-          <div class="meta">By [Author] • [Date] • [Category]</div>
-          <div class="article-body">
-            <p><strong>Disclaimer:</strong> This article is fictional and was created for a class project.</p>
-            <p>[Your full article text goes here...]</p>
-          </div>
-        </article>
-      </section>
+  <!-- ARTICLES GRID -->
+  <main class="container articles">
+    <article class="card">
+      <img src="thumb1.jpg" alt="">
+      <h2>[Article title]</h2>
+      <p>[Short summary of the article...]</p>
+    </article>
+    <article class="card">
+      <img src="thumb2.jpg" alt="">
+      <h2>[Article title]</h2>
+      <p>[Short summary of the article...]</p>
+    </article>
+    <article class="card">
+      <img src="thumb3.jpg" alt="">
+      <h2>[Article title]</h2>
+      <p>[Short summary of the article...]</p>
+    </article>
+  </main>
 
-      <aside>
-        <div class="card">
-          <h4>About this site</h4>
-          <p>This is a fictional site created for a school assignment. None of the stories are real.</p>
-        </div>
-      </aside>
-    </main>
+  <!-- FULL ARTICLE (hidden until clicked) -->
+  <section id="article" class="container full-article">
+    <h2>[Full Article Headline]</h2>
+    <p class="meta">By [Author] — [Date]</p>
+    <div class="article-body">
+      <p>[Full article text goes here...]</p>
+    </div>
+  </section>
 
-    <footer>
-      <p>All content on this site is fictional and created solely for educational purposes.</p>
-    </footer>
-  </div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 NewsToday. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
