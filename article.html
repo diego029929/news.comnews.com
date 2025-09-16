@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Le Quotidien - Article</title>
+<meta name="description" content="Article détaillé sur la mission lunaire de 2025.">
+<style>
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#ff6b6b;
+  --accent-2:#4f46e5;
+  --glass: rgba(255,255,255,0.04);
+  --glass-2: rgba(255,255,255,0.02);
+  --maxw:900px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg, #071027 0%, #07121b 100%);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:32px 16px;
+  display:flex;
+  justify-content:center;
+}
+.container{width:100%;max-width:var(--maxw);}
+header.site-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px;}
+.brand{display:flex;align-items:center;gap:12px;}
+.logo{width:52px;height:52px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent-2));font-weight:700;color:#071021;box-shadow:0 6px 18px rgba(79,70,229,0.12);}
+.title{font-size:20px;font-weight:700;line-height:1;color:#fff}
+nav.main-nav{display:flex;gap:12px;align-items:center}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;padding:8px;border-radius:8px}
+nav a:hover{color:#fff;background:var(--glass)}
+.article-header{margin-bottom:24px}
+.article-header h1{font-size:32px;margin:8px 0}
+.article-meta{color:var(--muted);font-size:13px;margin-bottom:16px}
+.article-thumb{width:100%;height:300px;background:linear-gradient(135deg,#16213b,#0b3a66);border-radius:12px;margin-bottom:16px}
+.article-content{line-height:1.6;color:#e6eef6}
+.article-content p{margin-bottom:16px}
+footer{margin-top:28px;color:var(--muted);font-size:13px}
+@media (max-width:600px){
+  .article-thumb{height:200px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">Q</div>
+      <div>
+        <div class="title">Le Quotidien</div>
+        <div class="small">Infos — Analyses — Opinions</div>
+      </div>
+    </div>
+
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="#">Monde</a>
+      <a href="#">Économie</a>
+      <a href="#">Culture</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <article>
+    <div class="article-header">
+      <h1>Découverte majeure : nouvelle mission lunaire dévoilée</h1>
+      <div class="article-meta">Par <strong>Marine Dupont</strong> — 2 heures • Lecture 4 min</div>
+      <div class="article-thumb"></div>
+    </div>
+
+    <div class="article-content">
+      <p>Les agences spatiales internationales annoncent une collaboration inédite pour une mission habitée vers la Lune. Cette mission, prévue pour 2025, marquera une étape majeure dans l'exploration spatiale moderne.</p>
+      <p>Le projet implique la participation de plusieurs pays et entreprises privées. L'objectif est de mettre en place une base lunaire expérimentale qui servira de plateforme pour des missions plus lointaines, notamment vers Mars.</p>
+      <p>Les enjeux géopolitiques sont également importants : cette collaboration pourrait renforcer la coopération scientifique internationale tout en posant de nouveaux défis en matière de financement et de sécurité.</p>
+      <p>Des technologies innovantes seront testées, incluant des systèmes de survie autonomes, des habitats modulaires et des méthodes avancées d'exploration robotisée.</p>
+      <p>Pour les passionnés de sciences et d’astronautique, cette mission offre un aperçu concret de ce que pourrait être le futur de l’exploration spatiale humaine.</p>
+    </div>
+  </article>
+
+  <footer>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>© Le Quotidien — 2025</div>
+      <div style="color:var(--muted)">Politique de confidentialité • Mentions légales</div>
+    </div>
+  </footer>
+</div>
+</body>
+    </html>
+    
