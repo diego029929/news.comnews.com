@@ -1,276 +1,188 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Le Quotidien - Accueil</title>
-  <meta name="description" content="Page d'accueil d'un site de news minimaliste : une UNE, articles récents et tendances." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DailyNews - Accueil</title>
   <style>
-    /* ==========================
-       CSS (≈200 lignes)
-       ========================== */
-    :root{
-      --bg:#0f1724; /* dark slate */
-      --card:#0b1220;
-      --muted:#9aa4b2;
-      --accent:#ff6b6b;
-      --accent-2:#4f46e5;
-      --glass: rgba(255,255,255,0.04);
-      --glass-2: rgba(255,255,255,0.02);
-      --maxw:1200px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      background: linear-gradient(180deg, #071027 0%, #07121b 100%);
-      color:#e6eef6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding:32px 16px;
-      display:flex;
-      justify-content:center;
-    }
-    .container{
-      width:100%;
-      max-width:var(--maxw);
+    /* ===================== BODY ===================== */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      overflow-x: hidden;
     }
 
-    header.site-header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      margin-bottom:24px;
-    }
-    .brand{
-      display:flex;align-items:center;gap:12px;
-    }
-    .logo{
-      width:52px;height:52px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent-2));font-weight:700;color:#071021;box-shadow:0 6px 18px rgba(79,70,229,0.12);
-    }
-    .title{
-      font-size:20px;font-weight:700;line-height:1;color:#fff
-    }
-    nav.main-nav{display:flex;gap:12px;align-items:center}
-    nav a{color:var(--muted);text-decoration:none;font-size:14px;padding:8px;border-radius:8px}
-    nav a:hover{color:#fff;background:var(--glass)}
-
-    /* Search + theme */
-    .controls{display:flex;gap:12px;align-items:center}
-    .search{background:var(--glass-2);border:1px solid rgba(255,255,255,0.03);padding:8px 10px;border-radius:10px;color:var(--muted);width:220px}
-    .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;padding:8px 12px;border-radius:10px;color:#071021;font-weight:600;cursor:pointer}
-
-    /* Layout */
-    main.grid{
-      display:grid;
-      grid-template-columns: 1fr 320px;
-      gap:20px;
-    }
-    .hero{
-      background: linear-gradient(180deg, rgba(255,107,107,0.08), rgba(79,70,229,0.04));
-      border-radius:14px;padding:20px;border:1px solid rgba(255,255,255,0.03);
-      display:flex;gap:18px;align-items:flex-end;overflow:hidden
-    }
-    .hero .thumb{flex:0 0 44%;min-height:200px;background:linear-gradient(135deg,#16213b,#0b3a66);border-radius:10px}
-    .hero .copy{flex:1;padding:6px 12px}
-    .kicker{font-size:12px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:0.08em}
-    .h1{font-size:28px;margin:8px 0 6px}
-    .lede{color:var(--muted);line-height:1.5}
-    .meta{margin-top:12px;color:var(--muted);font-size:13px}
-
-    /* articles list */
-    .articles{margin-top:18px;display:grid;gap:12px}
-    .card{background:var(--card);border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,0.02);display:flex;gap:12px;align-items:center}
-    .card .meta{color:var(--muted);font-size:13px}
-    .card .thumb{width:96px;height:72px;border-radius:8px;background:linear-gradient(135deg,#0b2e2f,#05343a)}
-    .card h3{margin:0;font-size:16px}
-
-    /* sidebar */
-    aside{position:relative}
-    .panel{background:linear-gradient(180deg,#061023, #041424);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
-    .panel h4{margin:0 0 10px 0}
-    .trend{display:flex;align-items:center;gap:10px;padding:8px;border-radius:8px}
-    .trend .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
-    .small{font-size:13px;color:var(--muted)}
-
-    /* footer */
-    footer{margin-top:28px;color:var(--muted);font-size:13px}
-
-    /* responsive */
-    @media (max-width:960px){
-      main.grid{grid-template-columns:1fr}
-      .hero{flex-direction:column}
-      .hero .thumb{width:100%;min-height:160px}
+    /* ===================== HEADER ===================== */
+    .header {
+      background: #1a1a1a;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
     }
 
-    /* subtle animations */
-    .card, .panel, .hero{transition:transform .18s ease, box-shadow .18s ease}
-    .card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    .header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
 
-    /* article modal */
-    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.6);padding:24px}
-    .modal.open{display:flex}
-    .modal .dialog{background:#071327;padding:18px;border-radius:12px;max-width:900px;width:100%;color:#eaf2ff}
-    .dialog h2{margin-top:0}
-    .close{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:6px 10px;border-radius:8px;color:var(--muted);cursor:pointer}
+    .nav a {
+      margin: 0 0.8rem;
+      color: #ddd;
+      text-decoration: none;
+    }
+    .nav a:hover {
+      color: #fff;
+    }
+
+    .search input {
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      border: none;
+    }
+
+    /* ===================== MAIN LAYOUT ===================== */
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      padding: 2rem;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    .container.fade-out {
+      opacity: 0;
+    }
+
+    /* ===================== MAIN ARTICLE ===================== */
+    .main-article {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .main-article:hover {
+      transform: scale(1.02);
+    }
+
+    .article-img {
+      width: 100%;
+      display: block;
+    }
+
+    .article-content {
+      padding: 1rem;
+    }
+
+    /* ===================== SIDEBAR ===================== */
+    .sidebar {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 1rem;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===================== FOOTER ===================== */
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      background: #1a1a1a;
+      color: #ccc;
+      margin-top: 2rem;
+    }
+
+    /* ===================== CLICK ANIMATION ===================== */
+    @keyframes click-bounce {
+      0% { transform: scale(1); }
+      50% { transform: scale(0.95); }
+      100% { transform: scale(1); }
+    }
+
+    .main-article.clicked {
+      animation: click-bounce 0.3s ease;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header class="site-header">
-      <div class="brand">
-        <div class="logo">Q</div>
-        <div>
-          <div class="title">Le Quotidien</div>
-          <div class="small">Infos — Analyses — Opinions</div>
-        </div>
-      </div>
-
-      <nav class="main-nav" aria-label="Navigation principale">
-        <a href="#">Accueil</a>
-        <a href="#">Monde</a>
-        <a href="#">Économie</a>
-        <a href="#">Culture</a>
-        <a href="#">Contact</a>
-      </nav>
-
-      <div class="controls">
-        <input id="search" class="search" placeholder="Rechercher..." />
-        <button id="theme" class="btn">Theme</button>
-      </div>
-    </header>
-
-    <main class="grid" role="main">
-      <section>
-        <article class="hero" aria-labelledby="hero-title">
-          <div class="thumb" aria-hidden="true"></div>
-          <div class="copy">
-            <div class="kicker">Une</div>
-            <h1 id="hero-title" class="h1">Découverte majeure : nouvelle mission lunaire dévoilée</h1>
-            <p class="lede">Les agences spatiales internationales annoncent une collaboration inédite pour une mission habitée vers la Lune. Détails, calendrier et enjeux géopolitiques.</p>
-            <div class="meta">Par <strong>Marine Dupont</strong> — 2 heures • <span class="small">Lecture 4 min</span></div>
-          </div>
-        </article>
-
-        <div class="articles" id="articles">
-          <div class="card" data-title="Economy rebounds">
-            <div style="flex:1">
-              <h3>Économie : une reprise plus rapide que prévue</h3>
-              <div class="meta">Par Julien Martin • 5h</div>
-            </div>
-            <div class="thumb" aria-hidden="true"></div>
-          </div>
-
-          <div class="card" data-title="Tech Innovation">
-            <div style="flex:1">
-              <h3>Tech : l'IA transforme la recherche médicale</h3>
-              <div class="meta">Par Amina K. • Hier</div>
-            </div>
-            <div class="thumb" aria-hidden="true"></div>
-          </div>
-
-          <div class="card" data-title="Culture festivals">
-            <div style="flex:1">
-              <h3>Culture : saison des festivals, que retenir ?</h3>
-              <div class="meta">Par Élodie • 2 jours</div>
-            </div>
-            <div class="thumb" aria-hidden="true"></div>
-          </div>
-        </div>
-      </section>
-
-      <aside>
-        <div class="panel">
-          <h4>Tendances</h4>
-          <div class="trend"><div class="dot"></div><div>#Lune2025 — Débats sur le financement</div></div>
-          <div class="trend"><div class="dot" style="background:var(--accent-2)"></div><div>#IA — Nouvel algorithme dévoilé</div></div>
-          <div style="height:12px"></div>
-          <h4>À la une cette semaine</h4>
-          <ul style="padding-left:16px;margin:8px 0;">
-            <li class="small">Analyse : croissance vs inflation</li>
-            <li class="small">Reportage : vie urbaine après 2030</li>
-            <li class="small">Interview : ministre de l'énergie</li>
-          </ul>
-        </div>
-
-        <div style="height:12px"></div>
-        <div class="panel">
-          <h4>Newsletter</h4>
-          <p class="small">Reçois chaque matin un résumé des principales infos.</p>
-          <div style="display:flex;gap:8px;margin-top:8px">
-            <input id="email" placeholder="Email" style="flex:1;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit" />
-            <button id="sub" class="btn">S'inscrire</button>
-          </div>
-        </div>
-      </aside>
-    </main>
-
-    <footer>
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-        <div>© Le Quotidien — 2025</div>
-        <div style="color:var(--muted)">Politique de confidentialité • Mentions légales</div>
-      </div>
-    </footer>
-  </div>
-
-  <!-- Modal article -->
-  <div id="modal" class="modal" role="dialog" aria-modal="true">
-    <div class="dialog" role="document">
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <h2 id="modal-title">Titre</h2>
-        <button id="close" class="close">Fermer</button>
-      </div>
-      <p id="modal-body">Contenu de l'article...</p>
+  <header class="header">
+    <div class="logo">📰 DailyNews</div>
+    <nav class="nav">
+      <a href="#">Accueil</a>
+      <a href="#">Monde</a>
+      <a href="#">Politique</a>
+      <a href="#">Économie</a>
+      <a href="#">Culture</a>
+      <a href="#">Sports</a>
+    </nav>
+    <div class="search">
+      <input type="text" placeholder="Rechercher...">
     </div>
-  </div>
+  </header>
+
+  <main class="container" id="main-container">
+    <section class="main-article" id="main-article">
+      <img src="https://picsum.photos/900/400" alt="Une" class="article-img">
+      <div class="article-content">
+        <h1>La conquête de Mars : une nouvelle ère spatiale</h1>
+        <p>Les agences du monde entier se lancent dans une course historique pour coloniser la planète rouge. Découvrez les derniers progrès scientifiques...</p>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <h2>À la Une</h2>
+      <ul>
+        <li><a href="#">Crise énergétique mondiale : les solutions émergentes</a></li>
+        <li><a href="#">Élections 2025 : un scrutin décisif</a></li>
+        <li><a href="#">Climat : l’urgence se fait pressante</a></li>
+        <li><a href="#">Culture : le cinéma français en plein essor</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 DailyNews. Tous droits réservés.</p>
+  </footer>
 
   <script>
-    // ==========================
-    // JS (≈50 lignes)
-    // ==========================
-    const search = document.getElementById('search');
-    const articles = Array.from(document.querySelectorAll('.card'));
-    const modal = document.getElementById('modal');
-    const modalTitle = document.getElementById('modal-title');
-    const modalBody = document.getElementById('modal-body');
-    const closeBtn = document.getElementById('close');
+    document.addEventListener("DOMContentLoaded", () => {
+      const mainArticle = document.getElementById("main-article");
+      const container = document.getElementById("main-container");
 
-    // Filter articles by search
-    search.addEventListener('input', (e) => {
-      const q = e.target.value.trim().toLowerCase();
-      articles.forEach(card => {
-        const title = card.querySelector('h3').textContent.toLowerCase();
-        card.style.display = title.includes(q) ? 'flex' : 'none';
+      mainArticle.addEventListener("click", () => {
+        mainArticle.classList.add("clicked");
+        container.classList.add("fade-out"); // fade out page
+        setTimeout(() => {
+          window.location.href = "article.html"; // redirection
+        }, 500); // délai pour que fade-out soit visible
       });
-    });
-
-    // Open modal on article click
-    articles.forEach(card => {
-      card.addEventListener('click', () => {
-        modalTitle.textContent = card.querySelector('h3').textContent;
-        modalBody.textContent = 'Voici le début de l\'article — contenu d\'exemple. Développez ici pour inclure le texte complet.';
-        modal.classList.add('open');
-      });
-    });
-
-    // Close modal
-    closeBtn.addEventListener('click', () => modal.classList.remove('open'));
-    modal.addEventListener('click', (e) => { if(e.target === modal) modal.classList.remove('open') });
-
-    // Newsletter demo
-    document.getElementById('sub').addEventListener('click', () => {
-      const email = document.getElementById('email').value.trim();
-      if(!email) return alert('Merci de saisir une adresse e-mail');
-      alert('Merci — inscription reçue : ' + email);
-    });
-
-    // Theme toggle (simple)
-    document.getElementById('theme').addEventListener('click', () => {
-      document.documentElement.style.setProperty('--bg', '#fff');
-      document.body.style.background = 'linear-gradient(180deg,#f8fafc,#eef2ff)';
-      // small visual swap: invert colors for demo
     });
   </script>
 </body>
