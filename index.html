@@ -1,69 +1,110 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NewsToday</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Le Quotidien — Titre de l'article</title>
+
+  <!-- (optionnel) Google Fonts - si tu as Internet, ça améliore le rendu -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- HEADER -->
   <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">NewsToday</div>
-      <nav class="nav">
-        <a href="#" class="active">Home</a>
-        <a href="#">World</a>
-        <a href="#">Politics</a>
-        <a href="#">Science</a>
-        <a href="#">Culture</a>
+    <div class="header-inner container">
+      <div class="brand">
+        <div class="logo">LQ</div>
+        <div class="brand-text">
+          <div class="brand-name">Le Quotidien</div>
+          <div class="brand-sub">Actualités</div>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#" class="nav-link active">Accueil</a>
+        <a href="#" class="nav-link">Monde</a>
+        <a href="#" class="nav-link">Société</a>
+        <a href="#" class="nav-link">Culture</a>
+        <button id="theme-toggle" class="icon-btn" aria-label="Changer le thème">🌙</button>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO full-bleed -->
   <section class="hero">
-    <img src="hero.jpg" alt="Main story">
-    <div class="hero-overlay"></div>
-    <div class="hero-text container">
-      <h1>[Main Headline Here]</h1>
-      <p>[Subtitle or short description of the article...]</p>
-      <button onclick="openArticle()" class="btn-primary">Read more</button>
+    <img src="hero.jpg" alt="Illustration principale" class="hero-media" loading="lazy">
+    <div class="hero-gradient"></div>
+
+    <div class="hero-content container">
+      <div class="kicker">Dernière heure</div>
+      <h1 id="headline">[Titre principal — à remplir]</h1>
+      <p class="dek" id="lede">[Phrase d'accroche / chapô — une ou deux lignes pour donner le ton.]</p>
+
+      <div class="meta-row">
+        <div class="byline">Par <strong id="author">[Auteur]</strong></div>
+        <div class="dateline" id="date">— 16 septembre 2025</div>
+      </div>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary" id="open-article">Lire l'article</button>
+        <div class="share-inline" aria-hidden="true">
+          <button class="icon-btn" data-share="twitter" title="Partager sur Twitter">🐦</button>
+          <button class="icon-btn" data-share="facebook" title="Partager sur Facebook">📘</button>
+          <button class="icon-btn" id="copy-link" title="Copier le lien">🔗</button>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ARTICLES GRID -->
-  <main class="container articles">
-    <article class="card">
-      <img src="thumb1.jpg" alt="">
-      <h2>[Article title]</h2>
-      <p>[Short summary of the article...]</p>
-    </article>
-    <article class="card">
-      <img src="thumb2.jpg" alt="">
-      <h2>[Article title]</h2>
-      <p>[Short summary of the article...]</p>
-    </article>
-    <article class="card">
-      <img src="thumb3.jpg" alt="">
-      <h2>[Article title]</h2>
-      <p>[Short summary of the article...]</p>
+  <!-- ARTICLE FULL -->
+  <main class="container article-wrap" id="article-wrap" tabindex="-1">
+    <article class="article-content" id="article" aria-labelledby="headline">
+      <header class="article-header">
+        <h2 class="article-title" id="article-title">[Titre de l'article — ici aussi]</h2>
+        <p class="article-meta">
+          <span class="author">Par <span id="author-2">[Auteur]</span></span>
+          <span class="dot">•</span>
+          <time id="pubdate" datetime="2025-09-16">16 septembre 2025</time>
+        </p>
+      </header>
+
+      <figure class="article-figure">
+        <img src="hero.jpg" alt="Photo de l'article" loading="lazy">
+        <figcaption class="caption">[Légende de l'image]</figcaption>
+      </figure>
+
+      <div class="article-body">
+        <!-- ARTICLE VIDE : remplis ici -->
+        <p>[Premier paragraphe — introduction : qui / quoi / où / quand / pourquoi]</p>
+        <p>[Deuxième paragraphe — développement]</p>
+        <blockquote class="pull-quote">« [Citation mise en avant] » — <cite>[Nom]</cite></blockquote>
+        <p>[Suite de l'article...]</p>
+        <h3>Sous-titre</h3>
+        <p>[Paragraphe sous le sous-titre]</p>
+        <p>[Conclusion / appel à l'action]</p>
+      </div>
+
+      <footer class="article-footer">
+        <div class="tags">
+          <a href="#" class="tag">#Politique</a>
+          <a href="#" class="tag">#Enquête</a>
+        </div>
+        <div class="article-actions">
+          <button class="btn-outline" id="share-bottom">Partager</button>
+        </div>
+      </footer>
     </article>
   </main>
 
-  <!-- FULL ARTICLE (hidden until clicked) -->
-  <section id="article" class="container full-article">
-    <h2>[Full Article Headline]</h2>
-    <p class="meta">By [Author] — [Date]</p>
-    <div class="article-body">
-      <p>[Full article text goes here...]</p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 NewsToday. All rights reserved.</p>
+    <div class="container footer-inner">
+      <div>© <span id="year">2025</span> Le Quotidien</div>
+      <div class="footer-links">
+        <a href="#">À propos</a>
+        <a href="#">Contact</a>
+        <a href="#">Mentions légales</a>
+      </div>
     </div>
   </footer>
 
