@@ -2,72 +2,72 @@
 <html lang="en">
 <head>
   <meta name="google-site-verification" content="OD7MzyhS8J_1zhzu_61VPonqbPGY02EJk45hUD3z6aA" />
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Daily - Home</title>
-<meta name="description" content="Minimalist news homepage: top story, recent articles, and trends.">
-<style>
-:root{
-  --bg:#0f1724;
-  --card:#0b1220;
-  --muted:#9aa4b2;
-  --accent:#ff6b6b;
-  --accent-2:#4f46e5;
-  --glass: rgba(255,255,255,0.04);
-  --glass-2: rgba(255,255,255,0.02);
-  --maxw:1200px;
-}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  background: linear-gradient(180deg, #071027 0%, #07121b 100%);
-  color:#e6eef6;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  padding:32px 16px;
-  display:flex;
-  justify-content:center;
-  transition: background 0.4s ease;
-}
-.container{width:100%;max-width:var(--maxw);}
-header.site-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px;}
-.brand{display:flex;align-items:center;gap:12px;}
-.logo{width:52px;height:52px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent-2));font-weight:700;color:#071021;box-shadow:0 6px 18px rgba(79,70,229,0.12);}
-.title{font-size:20px;font-weight:700;line-height:1;color:#fff}
-nav.main-nav{display:flex;gap:12px;align-items:center}
-nav a{color:var(--muted);text-decoration:none;font-size:14px;padding:8px;border-radius:8px}
-nav a:hover{color:#fff;background:var(--glass)}
-.controls{display:flex;gap:12px;align-items:center}
-.search{background:var(--glass-2);border:1px solid rgba(255,255,255,0.03);padding:8px 10px;border-radius:10px;color:var(--muted);width:220px}
-main.grid{display:grid;grid-template-columns: 1fr 320px;gap:20px;opacity:1;transition:opacity 0.4s ease;}
-main.grid.fade-out{opacity:0;}
-.hero{background: linear-gradient(180deg, rgba(255,107,107,0.08), rgba(79,70,229,0.04));border-radius:14px;padding:20px;border:1px solid rgba(255,255,255,0.03);display:flex;gap:18px;align-items:flex-end;overflow:hidden;cursor:pointer;transition:transform 0.2s ease;}
-.hero:hover{transform:scale(1.02);}
-.hero .thumb{flex:0 0 44%;min-height:200px;background:linear-gradient(135deg,#16213b,#0b3a66);border-radius:10px}
-.hero .copy{flex:1;padding:6px 12px}
-.kicker{font-size:12px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:0.08em}
-.h1{font-size:28px;margin:8px 0 6px}
-.lede{color:var(--muted);line-height:1.5}
-.meta{margin-top:12px;color:var(--muted);font-size:13px}
-.articles{margin-top:18px;display:grid;gap:12px}
-.card{background:var(--card);border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,0.02);display:flex;gap:12px;align-items:center;cursor:pointer;transition:transform .18s ease, box-shadow .18s ease;}
-.card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(2,6,23,0.6);}
-.card .meta{color:var(--muted);font-size:13px}
-.card .thumb{width:96px;height:72px;border-radius:8px;background:linear-gradient(135deg,#0b2e2f,#05343a)}
-.card h3{margin:0;font-size:16px}
-aside{position:relative}
-.panel{background:linear-gradient(180deg,#061023, #041424);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
-.panel h4{margin:0 0 10px 0}
-.trend{display:flex;align-items:center;gap:10px;padding:8px;border-radius:8px}
-.trend .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
-.small{font-size:13px;color:var(--muted)}
-footer{margin-top:28px;color:var(--muted);font-size:13px}
-@media (max-width:960px){main.grid{grid-template-columns:1fr}.hero{flex-direction:column}.hero .thumb{width:100%;min-height:160px}}
-.clicked{animation:click-bounce 0.3s ease}
-@keyframes click-bounce{0%{transform:scale(1)}50%{transform:scale(0.95)}100%{transform:scale(1)}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>The Daily - Home</title>
+  <meta name="description" content="Minimalist news homepage: top story, recent articles, and trends.">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#ff6b6b;
+      --accent-2:#4f46e5;
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg, #071027 0%, #07121b 100%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px 16px;
+      display:flex;
+      justify-content:center;
+      transition: background 0.4s ease;
+    }
+    .container{width:100%;max-width:var(--maxw);}
+    header.site-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px;}
+    .brand{display:flex;align-items:center;gap:12px;}
+    .logo{width:52px;height:52px;border-radius:8px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent-2));font-weight:700;color:#071021;box-shadow:0 6px 18px rgba(79,70,229,0.12);}
+    .title{font-size:20px;font-weight:700;line-height:1;color:#fff}
+    nav.main-nav{display:flex;gap:12px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-size:14px;padding:8px;border-radius:8px}
+    nav a:hover{color:#fff;background:var(--glass)}
+    .controls{display:flex;gap:12px;align-items:center}
+    .search{background:var(--glass-2);border:1px solid rgba(255,255,255,0.03);padding:8px 10px;border-radius:10px;color:var(--muted);width:220px}
+    main.grid{display:grid;grid-template-columns: 1fr 320px;gap:20px;opacity:1;transition:opacity 0.4s ease;}
+    main.grid.fade-out{opacity:0;}
+    .hero{background: linear-gradient(180deg, rgba(255,107,107,0.08), rgba(79,70,229,0.04));border-radius:14px;padding:20px;border:1px solid rgba(255,255,255,0.03);display:flex;gap:18px;align-items:flex-end;overflow:hidden;cursor:pointer;transition:transform 0.2s ease;}
+    .hero:hover{transform:scale(1.02);}
+    .hero .thumb{flex:0 0 44%;min-height:200px;background:linear-gradient(135deg,#16213b,#0b3a66);border-radius:10px}
+    .hero .copy{flex:1;padding:6px 12px}
+    .kicker{font-size:12px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:0.08em}
+    .h1{font-size:28px;margin:8px 0 6px}
+    .lede{color:var(--muted);line-height:1.5}
+    .meta{margin-top:12px;color:var(--muted);font-size:13px}
+    .articles{margin-top:18px;display:grid;gap:12px}
+    .card{background:var(--card);border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,0.02);display:flex;gap:12px;align-items:center;cursor:pointer;transition:transform .18s ease, box-shadow .18s ease;}
+    .card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(2,6,23,0.6);}
+    .card .meta{color:var(--muted);font-size:13px}
+    .card .thumb{width:96px;height:72px;border-radius:8px;background:linear-gradient(135deg,#0b2e2f,#05343a)}
+    .card h3{margin:0;font-size:16px}
+    aside{position:relative}
+    .panel{background:linear-gradient(180deg,#061023, #041424);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .panel h4{margin:0 0 10px 0}
+    .trend{display:flex;align-items:center;gap:10px;padding:8px;border-radius:8px}
+    .trend .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+    .small{font-size:13px;color:var(--muted)}
+    footer{margin-top:28px;color:var(--muted);font-size:13px}
+    @media (max-width:960px){main.grid{grid-template-columns:1fr}.hero{flex-direction:column}.hero .thumb{width:100%;min-height:160px}}
+    .clicked{animation:click-bounce 0.3s ease}
+    @keyframes click-bounce{0%{transform:scale(1)}50%{transform:scale(0.95)}100%{transform:scale(1)}}
+  </style>
 </head>
 <body>
 <div class="container">
@@ -95,13 +95,14 @@ footer{margin-top:28px;color:var(--muted);font-size:13px}
 
   <main class="grid" role="main" id="main-container">
     <section>
+      <!-- Hero updated for Blue Light article -->
       <article class="hero" aria-labelledby="hero-title" id="hero-article">
         <div class="thumb" aria-hidden="true"></div>
         <div class="copy">
           <div class="kicker">Top Story</div>
-          <h1 id="hero-title" class="h1">Major Discovery: New Lunar Mission Unveiled</h1>
-          <p class="lede">International space agencies announce an unprecedented collaboration for a crewed mission to the Moon.</p>
-          <div class="meta">By <strong>Marine Dupont</strong> — 2 hours ago • <span class="small">4 min read</span></div>
+          <h1 id="hero-title" class="h1">Blue Light from Screens Harms Memory</h1>
+          <p class="lede">Recent research suggests that prolonged exposure to screens can negatively affect memory and cognitive functions.</p>
+          <div class="meta">By <strong>Emile Varnier</strong> — Today • <span class="small">2 min read</span></div>
         </div>
       </article>
 
@@ -136,6 +137,7 @@ footer{margin-top:28px;color:var(--muted);font-size:13px}
       <div class="panel">
         <h4>Trending</h4>
         <div class="trend"><div class="dot"></div><div>#Moon2025 — Funding debates</div></div>
+        <div class="trend"><div class="dot" style="background:var(--accent-2)"></div><div>#AI — New algorithm revealed</div></div>
         <div style="height:12px"></div>
         <h4>In the spotlight this week</h4>
         <ul style="padding-left:16px;margin:8px 0;">
