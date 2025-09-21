@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Le Quotidien - Accueil</title>
-<meta name="description" content="Page d'accueil d'un site de news minimaliste : une UNE, articles récents et tendances.">
+<title>The Daily - Home</title>
+<meta name="description" content="Minimalist news homepage: top story, recent articles, and trends.">
 <style>
 :root{
   --bg:#0f1724;
@@ -74,21 +74,21 @@ footer{margin-top:28px;color:var(--muted);font-size:13px}
     <div class="brand">
       <div class="logo">Q</div>
       <div>
-        <div class="title">Le Quotidien</div>
-        <div class="small">Infos — Analyses — Opinions</div>
+        <div class="title">The Daily</div>
+        <div class="small">News — Analysis — Opinions</div>
       </div>
     </div>
 
-    <nav class="main-nav" aria-label="Navigation principale">
-      <a href="#">Accueil</a>
-      <a href="#">Monde</a>
-      <a href="#">Économie</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#">Home</a>
+      <a href="#">World</a>
+      <a href="#">Economy</a>
       <a href="#">Culture</a>
       <a href="#">Contact</a>
     </nav>
 
     <div class="controls">
-      <input id="search" class="search" placeholder="Rechercher..." />
+      <input id="search" class="search" placeholder="Search..." />
     </div>
   </header>
 
@@ -97,34 +97,34 @@ footer{margin-top:28px;color:var(--muted);font-size:13px}
       <article class="hero" aria-labelledby="hero-title" id="hero-article">
         <div class="thumb" aria-hidden="true"></div>
         <div class="copy">
-          <div class="kicker">Une</div>
-          <h1 id="hero-title" class="h1">Découverte majeure : nouvelle mission lunaire dévoilée</h1>
-          <p class="lede">Les agences spatiales internationales annoncent une collaboration inédite pour une mission habitée vers la Lune.</p>
-          <div class="meta">Par <strong>Marine Dupont</strong> — 2 heures • <span class="small">Lecture 4 min</span></div>
+          <div class="kicker">Top Story</div>
+          <h1 id="hero-title" class="h1">Major Discovery: New Lunar Mission Unveiled</h1>
+          <p class="lede">International space agencies announce an unprecedented collaboration for a crewed mission to the Moon.</p>
+          <div class="meta">By <strong>Marine Dupont</strong> — 2 hours ago • <span class="small">4 min read</span></div>
         </div>
       </article>
 
       <div class="articles" id="articles">
         <div class="card" data-title="Economy rebounds">
           <div style="flex:1">
-            <h3>Économie : une reprise plus rapide que prévue</h3>
-            <div class="meta">Par Julien Martin • 5h</div>
+            <h3>Economy: Recovery faster than expected</h3>
+            <div class="meta">By Julien Martin • 5h ago</div>
           </div>
           <div class="thumb" aria-hidden="true"></div>
         </div>
 
         <div class="card" data-title="Tech Innovation">
           <div style="flex:1">
-            <h3>Tech : l'IA transforme la recherche médicale</h3>
-            <div class="meta">Par Amina K. • Hier</div>
+            <h3>Tech: AI reshapes medical research</h3>
+            <div class="meta">By Amina K. • Yesterday</div>
           </div>
           <div class="thumb" aria-hidden="true"></div>
         </div>
 
         <div class="card" data-title="Culture festivals">
           <div style="flex:1">
-            <h3>Culture : saison des festivals, que retenir ?</h3>
-            <div class="meta">Par Élodie • 2 jours</div>
+            <h3>Culture: Festival season highlights</h3>
+            <div class="meta">By Elodie • 2 days ago</div>
           </div>
           <div class="thumb" aria-hidden="true"></div>
         </div>
@@ -133,25 +133,25 @@ footer{margin-top:28px;color:var(--muted);font-size:13px}
 
     <aside>
       <div class="panel">
-        <h4>Tendances</h4>
-        <div class="trend"><div class="dot"></div><div>#Lune2025 — Débats sur le financement</div></div>
-        <div class="trend"><div class="dot" style="background:var(--accent-2)"></div><div>#IA — Nouvel algorithme dévoilé</div></div>
+        <h4>Trending</h4>
+        <div class="trend"><div class="dot"></div><div>#Moon2025 — Funding debates</div></div>
+        <div class="trend"><div class="dot" style="background:var(--accent-2)"></div><div>#AI — New algorithm revealed</div></div>
         <div style="height:12px"></div>
-        <h4>À la une cette semaine</h4>
+        <h4>In the spotlight this week</h4>
         <ul style="padding-left:16px;margin:8px 0;">
-          <li class="small">Analyse : croissance vs inflation</li>
-          <li class="small">Reportage : vie urbaine après 2030</li>
-          <li class="small">Interview : ministre de l'énergie</li>
+          <li class="small">Analysis: growth vs inflation</li>
+          <li class="small">Report: urban life after 2030</li>
+          <li class="small">Interview: Minister of Energy</li>
         </ul>
       </div>
 
       <div style="height:12px"></div>
       <div class="panel">
         <h4>Newsletter</h4>
-        <p class="small">Reçois chaque matin un résumé des principales infos.</p>
+        <p class="small">Get a daily summary of the top news in your inbox.</p>
         <div style="display:flex;gap:8px;margin-top:8px">
           <input id="email" placeholder="Email" style="flex:1;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit" />
-          <button id="sub" class="btn">S'inscrire</button>
+          <button id="sub" class="btn">Subscribe</button>
         </div>
       </div>
     </aside>
@@ -159,8 +159,8 @@ footer{margin-top:28px;color:var(--muted);font-size:13px}
 
   <footer>
     <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-      <div>© Le Quotidien — 2025</div>
-      <div style="color:var(--muted)">Politique de confidentialité • Mentions légales</div>
+      <div>© The Daily — 2025</div>
+      <div style="color:var(--muted)">Privacy Policy • Legal Notice</div>
     </div>
   </footer>
 </div>
@@ -191,10 +191,9 @@ articles.forEach(card=>{
 // Newsletter demo
 document.getElementById('sub').addEventListener('click',()=>{
   const email=document.getElementById('email').value.trim();
-  if(!email) return alert('Merci de saisir une adresse e-mail');
-  alert('Merci — inscription reçue : ' + email);
+  if(!email) return alert('Please enter a valid email address');
+  alert('Thanks — subscription received: ' + email);
 });
 </script>
 </body>
-  </html>
-  
+</html>
